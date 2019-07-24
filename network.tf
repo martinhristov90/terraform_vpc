@@ -15,7 +15,7 @@ resource "aws_route_table" "testing-vpc-route-table" {
   route {
     # All traffic that is not part of the local network to be routed to testing-vpc-gw
     cidr_block = "0.0.0.0/0"
-    gateway_id = aws_internet_gateway.gw.id
+    gateway_id = aws_internet_gateway.testing-vpc-gw.id
   }
 
   tags = {
