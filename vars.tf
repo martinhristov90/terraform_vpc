@@ -13,12 +13,12 @@ variable "ec2_user" {
   default = "ubuntu"
 }
 
-variable "private_key_path" {
-  default = "PATH_TO_PRIVATE_KEY"
+variable "private_key" {
+  default = ""
 }
 
-variable "public_key_path" {
-  default = "PATH_TO_PUBLIC_KEY"
+variable "public_key" {
+  default = ""
 }
 
 
