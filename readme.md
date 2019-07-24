@@ -52,3 +52,6 @@
 - Run `terraform apply` to create the both resources. 
 
 - In order to destroy the created resources, you can use `terraform destroy`.
+
+#### N.B
+- All `.tf` files have explanation of the resources they create within them as comments.
