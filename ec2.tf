@@ -11,7 +11,7 @@ resource "aws_instance" "web" {
   connection {
     host        = "${aws_instance.web.public_ip}"
     user        = "${var.ec2_user}"
-    private_key = "${file("${var.private_key_path}")}"
+    private_key = "${var.private_key}"
   }
 
   provisioner "remote-exec" {
@@ -29,6 +29,6 @@ resource "aws_instance" "web" {
 
 resource "aws_key_pair" "deployer" {
   key_name   = "aws_key_pair"
-  public_key = "${file(var.public_key_path)}"
+  public_key = "${var.public_key}"
 }
 
