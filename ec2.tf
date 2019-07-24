@@ -1,6 +1,6 @@
 resource "aws_instance" "web" {
   # Run this particular Ubuntu AMI
-  ami       = var.ami[var.aws_region]
+  ami = var.ami[var.aws_region]
   # Subnet ID this instance to be associated with
   subnet_id = aws_subnet.main.id
   # What SGs to apply to this instance
